@@ -35,3 +35,7 @@ runtime! init/**.vim
 " Machine-local vim settings - keep this at the end
 " --------------------------
 silent! source ~/.vimrc.local
+let NERDTreeShowHidden=1
+
+set nofoldenable 
+set guifont=Menlo\ Regular:h14
