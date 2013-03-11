@@ -35,3 +35,14 @@ runtime! init/**.vim
 " Machine-local vim settings - keep this at the end
 " --------------------------
 silent! source ~/.vimrc.local
+let NERDTreeShowHidden=1
+
+set nofoldenable 
+set guifont=Menlo\ Regular:h14
+set nohls
+imap <D-N> it { should accept_nested_attributes_for :
+imap <D-M> it { should allow_mass_assignment_of :
+imap <D-V> it { should validate_
+imap <D-O> <ESC>o
+imap <D-P> <SPACE><Left><ESC>pi<Right><Right><BS>
+
