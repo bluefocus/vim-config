@@ -34,15 +34,18 @@ runtime! init/**.vim
 
 " Machine-local vim settings - keep this at the end
 " --------------------------
+au BufNewFile,BufRead *.less set filetype=less
 silent! source ~/.vimrc.local
 let NERDTreeShowHidden=1
 
 set nofoldenable 
-set guifont=Menlo\ Regular:h14
+set guifont=Menlo\ Regular:h12
 set nohls
 imap <D-N> it { should accept_nested_attributes_for :
 imap <D-M> it { should allow_mass_assignment_of :
 imap <D-V> it { should validate_
 imap <D-O> <ESC>o
 imap <D-P> <SPACE><Left><ESC>pi<Right><Right><BS>
+
+let g:syntastic_html_tidy_ignore_errors = [ '<form> lacks "action" attribute', 'trimming empty <i>', 'trimming empty <li>', 'unescaped & which should be written as &amp;', '<form> proprietary attribute "novalidate"', '<input> proprietary attribute "required"', '<tags-input> is not recognized!', 'trimming empty <tags-input>', 'discarding unexpected <tags-input>', 'discarding unexpected </tags-input>', '<fb:login-button> is not recognized!', 'discarding unexpected <fb:login-button>', 'discarding unexpected </fb:login-button>', '<div> attribute "id" has invalid value ', '<a> escaping malformed URI reference']
 
