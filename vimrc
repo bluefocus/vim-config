@@ -47,5 +47,7 @@ imap <D-V> it { should validate_
 imap <D-O> <ESC>o
 imap <D-P> <SPACE><Left><ESC>pi<Right><Right><BS>
 
-let g:syntastic_html_tidy_ignore_errors = [ '<form> lacks "action" attribute', 'trimming empty <i>', 'trimming empty <li>', 'unescaped & which should be written as &amp;', '<form> proprietary attribute "novalidate"', '<input> proprietary attribute "required"', '<tags-input> is not recognized!', 'trimming empty <tags-input>', 'discarding unexpected <tags-input>', 'discarding unexpected </tags-input>', '<fb:login-button> is not recognized!', 'discarding unexpected <fb:login-button>', 'discarding unexpected </fb:login-button>', '<div> attribute "id" has invalid value ', '<a> escaping malformed URI reference']
+let g:syntastic_html_tidy_ignore_errors = [ '<form> lacks "action" attribute', 'trimming empty <i>', 'trimming empty <li>', 'unescaped & which should be written as &amp;', '<form> proprietary attribute "novalidate"', '<input> proprietary attribute "required"', '<tags-input> is not recognized!', 'trimming empty <tags-input>', 'discarding unexpected <tags-input>', 'discarding unexpected </tags-input>', '<fb:login-button> is not recognized!', 'discarding unexpected <fb:login-button>', 'discarding unexpected </fb:login-button>', '<div> attribute "id" has invalid value ', '<a> escaping malformed URI reference', '<textarea> proprietary attribute "placeholder"', 'trimming empty <span>', '<img> escaping malformed URI reference', '<img> lacks "src" attribute']
 
+command! W w|call system('touch -m .')
+set cc=80
